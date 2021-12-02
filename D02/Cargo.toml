@@ -1,0 +1,11 @@
+[package]
+name = "AdventOfCode2021_D02"
+version = "1.0.0"
+authors = ["RomainTHD"]
+edition = "2018"
+
+[[bin]]
+name = "main"
+path = "main.rs"
+
+[dependencies]
