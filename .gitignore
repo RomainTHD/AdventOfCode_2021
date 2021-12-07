@@ -135,3 +135,6 @@ dmypy.json
 
 _*
 **/_*
+*.obj
+*.o
+*.exe
