@@ -18,22 +18,29 @@ c Main subroutine, will call part 1 and part 2
         subroutine main(part)
             implicit none
 
-            integer part ! Part 1 or 2
+c           Part 1 or 2
+            integer part
 
-            integer, parameter :: BUFSIZE = 100 ! Line buffer size
-            integer, parameter :: f = 10 ! File
+c           Line buffer size
+            integer, parameter :: BUFSIZE = 100
+c           File
+            integer, parameter :: f = 10
 
-            integer IO_status ! Error status
-            integer lineno ! Line number
-            character line*100 ! Line buffer
-            integer res ! Result
+c           Error status
+            integer IO_status
+c           Line number
+            integer lineno
+c           Line buffer
+            character line*100
+c           Result
+            integer res
 
             integer part1
             integer part2
 
             res = 0
 
-            ! Open file
+c           Open file
             open(f, file = "input",
      &              form = "formatted",
      &              access = "sequential",
@@ -47,19 +54,19 @@ c Main subroutine, will call part 1 and part 2
 
             lineno = 0
 
-            ! Loop through the file
+c           Loop through the file
 100         continue
 
-            ! Read an entire line
+c           Read an entire line
             read (f, "(a)", iostat = IO_Status) line
 
-            ! Check for error
+c           Check for error
             if (IO_Status > 0) then
                 print *, "Error while reading line"
                 stop
             end if
 
-            ! Check for EOF
+c           Check for EOF
             if (IO_Status < 0) then
                 close(f)
                 goto 200

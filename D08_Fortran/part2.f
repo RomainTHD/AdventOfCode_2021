@@ -2,9 +2,11 @@ c Part 2 function, called for each line
         integer function part2(line)
             implicit none
 
-            character line*100 ! Line buffer
+c           Line buffer
+            character line*100
 
-            integer, parameter :: BUFSIZE = 100 ! Line buffer size
+c           Line buffer size
+            integer, parameter :: BUFSIZE = 100
 
             part2 = 0
             return
