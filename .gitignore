@@ -130,6 +130,7 @@ dmypy.json
 
 
 .idea
+.vs
 **/*.lock
 **/target
 
