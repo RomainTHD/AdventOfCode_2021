@@ -202,7 +202,7 @@ namespace D12 {
         /// </summary>
         /// <param name="args">Program arguments</param>
         public static void Main(string[] args) {
-            var graph = LoadData(@"D:\GDrive\Programmation\AdventOfCode_2021\D12_CSharp\input");
+            var graph = LoadData(@".\input");
             Console.WriteLine("Part 1:");
             Console.WriteLine(Part1.Run(graph));
             Console.WriteLine("Part 2:");
